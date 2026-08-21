@@ -1,0 +1,52 @@
+.society-details-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.society-market-link {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.society-market-link:hover {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+}
+
+.society-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.society-prop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-5);
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .society-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+  .society-prop-grid {
+    grid-template-columns: 1fr;
+  }
+  .society-market-link {
+    padding: var(--space-3) var(--space-4);
+  }
+}
